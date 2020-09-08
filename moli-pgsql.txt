@@ -1,0 +1,36 @@
+pgsql
+mk:vu
+5432
+
+php artisan make:controller ContactController --resource
+
+///////////connect pgsql////////////
+//cmd pgsql
+Server [localhost]:
+Database [postgres]: 360xe
+Port [5432]:
+Username [postgres]: postgres
+Password for user postgres:
+\i  'D:/Xampp/htdocs/db_api_360xe.sql'
+ pg_dump -U postgres 360xe > db_api_360xe.sql
+ psql -h localhost -U postgres -p 5432 360xe < 360xe.backup
+///
+psql -U postgres -d db_uvideo_v2 < uvideo.2020.10062020.bak
+pg_dump -U user db_name > archive_name.sql
+psql -h localhost -U postgres -p 5432 my_new_database < my_old_database.backup
+pg_restore -h localhost -p 5432 -U postgres -d my_new_database my_old_database.backup
+
+
+
+///////////////////////////////github////////////////////////////////////////////////////////////
+//push source len git.
+1. git add
+2. git commit -m "noi dung"
+3. git branch -M  (nhanh'muonden)
+4. git push -u origin (nhanh'muonden)
+//pull sr
+1. git clone (link)(noi chua file).
+2. chay composer. 
+	2.1. cd (noi chua file git pull).
+	2.2. composer install.
+//
